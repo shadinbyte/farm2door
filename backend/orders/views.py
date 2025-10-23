@@ -362,21 +362,6 @@ def order_statuses(request):
     )
 
 
-@permission_classes([permissions.IsAuthenticated])
-def remove_from_cart(request, item_id):
-    """Remove item from cart"""
-    if request.user.user_type != "customer":
-        return Response(
-            {"error": "Only customers can modify cart"},
-            status=status.HTTP_403_FORBIDDEN,
-        )
-
-    cart_item = get_object_or_404(CartItem, id=item_id, cart__customer=request.user)
-    cart_item.delete()
-
-    return Response({"message": "Item removed from cart"})
-
-
 @api_view(["DELETE"])
 @permission_classes([permissions.IsAuthenticated])
 def remove_from_cart(request, item_id):
@@ -428,17 +413,3 @@ def delete_order(request, order_number):
     order.delete()
 
     return Response({"message": "Order deleted successfully"})
-
-
-# View to retrieve all available order statuses
-@api_view(["GET"])
-@permission_classes([permissions.AllowAny])
-def order_statuses(request):
-    """Get available order statuses"""
-    return Response(
-        {
-            "order_statuses": dict(Order.ORDER_STATUS_CHOICES),
-            "tracking_statuses": dict(OrderTracking.TRACKING_STATUS_CHOICES),
-            "payment_statuses": dict(Order.PAYMENT_STATUS_CHOICES),
-        }
-    )

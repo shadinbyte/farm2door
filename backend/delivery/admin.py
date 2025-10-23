@@ -1,10 +1,9 @@
 # delivery/admin.py
 
-from time import gmtime, timezone
-
 from django.contrib import admin
 from django.db.models import Avg, Count
 from django.urls import reverse
+from django.utils import timezone
 from django.utils.html import format_html
 
 from .models import (
