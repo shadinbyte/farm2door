@@ -1,0 +1,108 @@
+.app {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #27ae60;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #f1f1f1;
+}
+
+/* Objectives */
+.objectives {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.objectives h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.objectives ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: disc;
+  padding-left: 40px;
+}
+
+/* Features */
+.features {
+  padding: 60px 20px;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Workflow */
+.workflow {
+  background: #ecf9f1;
+  padding: 60px 20px;
+}
+
+.workflow h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.workflow ol {
+  max-width: 700px;
+  margin: auto;
+  padding-left: 40px;
+}
+
+/* Footer */
+.footer {
+  background: #27ae60;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+}
