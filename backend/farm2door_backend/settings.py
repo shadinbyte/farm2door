@@ -6,6 +6,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
+
 from decouple import config
 
 # Build paths inside the project
@@ -181,9 +182,10 @@ SIMPLE_JWT = {
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
     config("FRONTEND_URL", default="http://localhost:3000"),
-    "http://localhost:8080",
+    "http://localhost:3000",  # React dev server
     "http://127.0.0.1:3000",
-    "http://127.0.0.1:8080",
+    "http://localhost:5173",  # Vite dev server
+    "http://127.0.0.1:5173",
 ]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
